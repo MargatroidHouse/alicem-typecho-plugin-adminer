@@ -4,8 +4,8 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
 }
 
 $db = Typecho_Db::get();
-$dbConfig = $db->getConfig();
-$dbConfig = $dbConfig[0];
+$dbConfig = $db->getConfig(1);
+// $dbConfig = $dbConfig[0];
 $dbConfig = unserialize($dbConfig->__toString());
 
 define('TYPECHO_ADMINER_STATIC_PREFIX', Helper::options()->pluginUrl . '/Adminer/adminer/static');
